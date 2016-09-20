@@ -29,6 +29,7 @@ September 20, 2016 9:52 AM
 
 
 三. 秘笈
+TODO 定义菜单的key和菜单  还有默认的一个key welcomeInfo
 1. 菜单
 - method: GET
 - url: index.php?controller=article&action=menus
@@ -38,29 +39,30 @@ September 20, 2016 9:52 AM
         error: 0,
         msg: '',
         data: {
-        button: [
-          {
-               "name":"考拉动态",
-               "sub_button":[
-               {    
-                   "type":"click",  // type 为click, 前端做的一些操作
-                   "name":"公司动态",
-                   "key": "companyState",
-                },
-                {
-                   "type":"view",    //type为view, 直接点击url跳转
-                   "name":"XXXXX",
-                   "url":"http://v.qq.com/"
-                },
-                ]
-           }]
-        }   
+            button: [
+              {
+                   "name":"考拉动态",
+                   "sub_button":[
+                   {    
+                       "type":"click",  // type 为click, 前端做的一些操作
+                       "name":"公司动态",
+                       "key": "companyState",
+                    },
+                    
+                    {
+                       "type":"view",    //type为view, 直接点击url跳转
+                       "name":"XXXXX",
+                       "url":"http://v.qq.com/"
+                    },
+                    ]
+               }]
+            }   
 }
 
-2. 推送文章信息
+2.推送文章信息
 - method: GET
 - url: index.php?controller=article&action=lists
-- parameters: key(菜单的key,用于区分那类型的文章), type=recommended(首页推送列表), page(页码,从0开始)
+- parameters: key(菜单的key,用于区分获取文章类型), type=recommended(首页推送列表)
 - retrun: 
 {
         error: 0,
@@ -103,7 +105,7 @@ September 20, 2016 9:52 AM
 1. 获取某类文章列表
 - method: GET
 - url: index.php?controller=article&action=lists
-- parameters:  key(菜单的key,用于区分那类型的文章), type=all(查看全部文章列表), page(页码,从0开始)
+- parameters:  key(菜单的key,用于区分那类型的文章), type=all(查看全部文章列表), page(页码,从0开始) limit=10(请求数据数量, 默认是10)
 - retrun: 
 {
         error: 0,
@@ -165,10 +167,11 @@ September 20, 2016 9:52 AM
                     tag_ids: ‘1,2,3,4,5’
              } 
 }  
-2. 获取推荐文章信息
+
+2.获取推荐文章信息
 - method: GET
 - url: index.php?controller=article&action=listsByTags
-- parameters: tags[] (tagId, ), limit=3
+- parameters: tags[] (tagId, ), limit=3(请求数据数量)
 - retrun: 
 {
         error: 0,
@@ -229,7 +232,7 @@ September 20, 2016 9:52 AM
             two_heat: {
                 rank: 0, // 热度对内排名
                 number: 0, // 热度数量
-                ratio: 50.55, // 热度百分比
+                : 50.55, // 热度百分比
             },   // 2热度情况
             three_heat: {
                 rank: 0, // 热度对内排名
@@ -243,7 +246,7 @@ September 20, 2016 9:52 AM
 1. 获取需要帮助的商家
 - method: GET
 - url: index.php?controller=employee&action=myStores
-- parameters: partner_id, employee_sn, type=last, limit=10
+- parameters: partner_id, employee_sn, type=last, limit=10(请求数据数量, 默认是10)
 - retrun: 
 {
         error: 0,
@@ -257,10 +260,11 @@ September 20, 2016 9:52 AM
                 }
             ] 
 }
-2. 获取已经帮助的商家
+
+2.获取已经帮助的商家
 - method: GET
 - url: index.php?controller=employee&action=myStores
-- parameters: partner_id, employee_sn, type=top, limit=10
+- parameters: partner_id, employee_sn, type=top, limit=10(请求数据数量, 默认是10)
 - retrun: 
 {
         error: 0,
