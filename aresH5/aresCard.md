@@ -1,4 +1,7 @@
-#### 1. 获取战神信息
+* [1. 获取战神信息](#getInfo)
+
+<h4 id='getInfo'>1. 获取战神信息</h4>
+
 - method: GET
 - url: index.php?controller=employee&action=card
 - parameters: 

@@ -1,4 +1,7 @@
-#### 1. 获取战神成绩
+* [1. 获取战神成绩](#getScore)
+
+<h4 id='getScore'>1. 获取战神成绩</h4>
+
 - method: GET
 - url: index.php?controller=employee&action=myScores
 - parameters: 

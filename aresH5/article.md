@@ -1,4 +1,9 @@
-#### 1. 获取文章下详情
+* [1. 获取文章下详情](#getDetail)
+* [2. 获取推荐文章信息](#getPush)
+
+
+<h4 id='getDetail'>1. 获取文章下详情</h4>
+
 - method: GET
 - url: index.php?controller=article&action=view
 - parameters: 
@@ -22,7 +27,7 @@
         }  
 
 
-#### 2. 获取推荐文章信息
+<h4 id='getPush'>2. 获取推荐文章信息</h4>
 - method: GET
 - url: index.php?controller=article&action=listsByTags
 - parameters: 

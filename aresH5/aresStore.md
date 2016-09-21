@@ -1,4 +1,7 @@
-#### 1. 获取需要帮助的商家
+* [1. 获取需要帮助的商家](#getStore)
+* [2. 获取已经帮助的商家](#getStore2)
+
+<h4 id='getStore'>1. 获取需要帮助的商家</h4>
 
 * method: GET
 * url: index.php?controller=employee&action=myStores
@@ -22,7 +25,7 @@
         }
 
 
-#### 2.获取已经帮助的商家
+<h4 id='getStore2'>2. 获取已经帮助的商家</h4>
 
 * method: GET
 * url: index.php?controller=employee&action=myStores

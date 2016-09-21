@@ -1,4 +1,8 @@
-#### 1. 获取某类文章列表
+* [1. 获取某类文章列表](#getList)
+
+
+<h4 id='getList'>1. 获取某类文章列表</h4>
+
 - method: GET
 - url: index.php?controller=article&action=lists
 - parameters:  

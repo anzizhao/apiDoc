@@ -77,35 +77,87 @@
     }
   ```
 
-<h4 id='key'>附1. 菜单对应的Key</h4>
-```
-{
-
- "name":"考拉动态",
- "sub_button":[
-     {
-        "type":"click", // type 为click, 前端做的一些操作
-        "name":"公司动态",
-        "key": "companyState",
-     },
-     {
-         "type":"click", 
-         "name":"产品动态",
-         "key": "productState",
-     },
-```
-
-{
-
-"type":"view", \/\/type为view, 直接点击url跳转
-
-"name":"XXXXX",
-
-"url":"[http:\/\/v.qq.com\/](http://v.qq.com/)"
-
-}
-
-\]
-
-}
+<h4 id='key'>附1. 菜单Keys </h4>
+- 默认的推送key为 "welcomeM" 
+- 菜单对应的key:
+        {
+            "name":"考拉动态",
+                "sub_button":[
+                    {
+                        "type":"click", // type 为click, 前端做的一些操作
+                        "name":"公司动态",
+                        "key": "companyStateM",
+                    },
+                    {
+                        "type":"click", 
+                        "name":"产品动态",
+                        "key": "productStateM",
+                    },
+                    {
+                        "type":"click", 
+                        "name":"同行动态",
+                        "key": "peerCompanyStateM",
+                    },
+                ]
+        },
+        {
+            "name":"武林秘笈",
+                "sub_button":[
+                    {
+                        "type":"click", // type 为click, 前端做的一些操作
+                        "name":"最新案例",
+                        "key": "newCaseM",
+                    },
+                    {
+                        "type":"click", 
+                        "name":"培训",
+                        "key": "trainM",
+                    },
+                    {
+                        "type":"click", 
+                        "name":"话术",
+                        "key": "speechcraftM",
+                    },
+                    {
+                        "type":"click", 
+                        "name":"热门活动",
+                        "key": "hotActivityM",
+                    },
+                    {
+                        "type":"click", 
+                        "name":"行业方案",
+                        "key": "industrySolutionsM",
+                    },
+                    {
+                        "type":"click", 
+                        "name":"相关硬件",
+                        "key": "relatedHardwareM",
+                    },
+                ]
+        },
+        {
+            "name":"战绩排名",
+                "sub_button":[
+                    {
+                        "type":"view",    //type为view, 直接点击url跳转
+                        "name":"我的战绩",
+                        "url":"http://v.qq.com/"
+                    },
+                    {
+                        "type":"view",    
+                        "name":"我的商家",
+                        "url":"http://v.qq.com/"
+                    },
+                    {
+                        "type":"view",    
+                        "name":"我的战队",
+                        "url":"http://v.qq.com/"
+                    },
+                    {
+                        "type":"click", 
+                        "name":"名人堂",
+                        "key": "hallOfFameM",
+                    },
+                ]
+        },
 
