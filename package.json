@@ -1,12 +1,13 @@
 {
   "name": "api",
-  "version": "1.0.0",
-  "description": "汇聚前端的api",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "前端的api文档",
+  "main": "",
   "scripts": {
       "gitbookInstall": "npm install gitbook-cli -g",
       "init": "gitbook init",
       "serve": "gitbook serve",
+      "tar": "tar -zcf api.tar.gz _book/",
       "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
