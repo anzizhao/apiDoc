@@ -1,7 +1,9 @@
 #### 1. 获取战神成绩
 - method: GET
 - url: index.php?controller=employee&action=myScores
-- parameters: partner_id, employee_sn
+- parameters: 
+    - partner_id, 
+    - employee_sn
 - retrun: 
         {
             error: 0,

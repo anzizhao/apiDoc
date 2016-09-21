@@ -1,7 +1,8 @@
 #### 1. 获取文章下详情
 - method: GET
 - url: index.php?controller=article&action=view
-- parameters: article_id (文章id)
+- parameters: 
+    - article_id (文章id)
 - retrun: 
         {
             error: 0,
@@ -22,12 +23,12 @@
 
 
 #### 2. 获取推荐文章信息
-    - method: GET
-    - url: index.php?controller=article&action=listsByTags
-    - parameters: 
-        tags[] (tagId, ) or  tag_ids: ‘1,2,3,4,5’
-        limit=3(请求数据数量)
-    - retrun: 
+- method: GET
+- url: index.php?controller=article&action=listsByTags
+- parameters: 
+    - tags[] (tagId, ) or  tag_ids: ‘1,2,3,4,5’
+    - limit=3(请求数据数量)
+- retrun: 
         {
             error: 0,
             msg: ''
