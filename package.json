@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "汇聚前端的api",
+  "main": "index.js",
+  "scripts": {
+      "gitbookInstall": "npm install gitbook-cli -g",
+      "init": "gitbook init",
+      "serve": "gitbook serve",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anzizhao/apiDoc.git"
+  },
+  "author": "zja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anzizhao/apiDoc/issues"
+  },
+  "homepage": "https://github.com/anzizhao/apiDoc#readme"
+}
