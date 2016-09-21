@@ -2,7 +2,7 @@
 * [2. 推送文章信息](#getInfo)
 * [附1. 菜单对应的Key](#key)
 
-#### [1. 获取菜单](id:getmenu)
+<h4 id='getmenu'>1. 获取菜单</h4>
 
 * method: GET
 * url: index.php?controller=article&action=menus
@@ -32,8 +32,7 @@
         }
   ```
 
-
-#### [2. 推送文章信息](id:getInfo)
+<h4 id='getInfo'>2. 推送文章信息</h4>
 
 * method: GET
 * url: index.php?controller=article&action=lists
@@ -78,9 +77,7 @@
     }
   ```
 
-
-#### [附1. 菜单对应的Key](id:key)
-
+<h4 id='key'>附1. 菜单对应的Key</h4>
 ```
 {
 
