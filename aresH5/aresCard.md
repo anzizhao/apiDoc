@@ -12,6 +12,7 @@
              error: 0,
              msg: 'success',
              data: {
+
                         partner_id: 12345, // 战队编号
                         employee_sn: 012, // 战神编号
                         partner_name: '', // 战队名称
