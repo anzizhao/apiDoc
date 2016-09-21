@@ -1,0 +1,274 @@
+<p>September 20, 2016 9:52 AM</p>
+
+<p>一. 开始首页(名片)
+1. 获取战神信息
+- method: GET
+- url: index.php?controller=employee&amp;action=card
+- parameters: partner<em>id, employee</em>sn
+- retrun: 
+{
+		error: 0,
+		msg: &#39;success&#39;,
+		data: {
+            partner<em>id: 12345, // 战队编号
+            employee</em>sn: 012, // 战神编号
+            partner<em>name: &#39;&#39;, // 战队名称
+            employee</em>name: &#39;&#39;,  // 战神姓名
+            employee<em>avatar: &#39;&#39;, // 战神头像url
+            rank: 1,  // 战神排名
+            development: 0, // 开拓力
+            leadership: 0, // 领导力
+            influence: 0, // 影响力
+            star</em>num:  0, // 星星个数
+    	}
+}</p>
+
+<p>二.  我是谁</p>
+
+<p>三. 秘笈
+TODO 定义菜单的key和菜单  还有默认的一个key welcomeInfo
+1. 菜单
+- method: GET
+- url: index.php?controller=article&amp;action=menus
+- parameters: 
+- retrun: 
+{
+        error: 0,
+        msg: &#39;&#39;,
+        data: {
+            button: [
+              {
+                   &quot;name&quot;:&quot;考拉动态&quot;,
+                   &quot;sub_button&quot;:[
+                   {  <br/>                       &quot;type&quot;:&quot;click&quot;,  // type 为click, 前端做的一些操作
+                       &quot;name&quot;:&quot;公司动态&quot;,
+                       &quot;key&quot;: &quot;companyState&quot;,
+                    },</p>
+
+<pre><code>                {
+                   &quot;type&quot;:&quot;view&quot;,    //type为view, 直接点击url跳转
+                   &quot;name&quot;:&quot;XXXXX&quot;,
+                   &quot;url&quot;:&quot;http://v.qq.com/&quot;
+                },
+                ]
+           }]
+        }   </code></pre>
+
+<p>}</p>
+
+<p>2.推送文章信息
+- method: GET
+- url: index.php?controller=article&amp;action=lists
+- parameters: key(菜单的key,用于区分获取文章类型), type=recommended(首页推送列表)
+- retrun: 
+{
+        error: 0,
+        msg: &#39;&#39;,
+        data: {
+            key: &#39;&#39;,   // 信息类型
+            link: &#39;&#39;,   // 如果为商品信息, link返回链接, 用于查看全部的跳转, 如果为文章类型, 不返回
+            articles: [
+                {
+                    article<em>id: &#39;&#39;, //文章ID
+                    type: &#39;article&#39;,  //类型, &#39;article&#39;文章信息
+                    title: &#39;&#39;,  //文章标题
+                    picture: &#39;&#39;, // 文章图片
+                    link: &#39;&#39;, // 外链, 这里不需要
+                    post</em>date: &#39;&#39;, // 文章发布时间
+                },
+                {
+                    article<em>id: &#39;&#39;, //文章ID
+                    type: &#39;link&#39;,  //类型, &#39;link&#39;跳转链接
+                    title: &#39;&#39;,  //文章标题
+                    picture: &#39;&#39;, // 文章图片
+                    link: &#39;&#39;, // 外链, 这里需要
+                    post</em>date: &#39;&#39;, // 文章发布时间
+                },
+                {
+                    article<em>id: &#39;&#39;, //文章ID
+                    type: &#39;goodsInfo&#39;,  //类型, &#39;goodsInfo&#39;商品信息
+                    name: &#39;&#39;,   // 商品名称 
+                    price: 0.00,  // 商品价格
+                    title: &#39;&#39;,  //文章标题
+                    picture: &#39;&#39;, // 文章图片
+                    link: &#39;&#39;, //商品跳转链接
+                    post</em>date: &#39;&#39;, // 文章发布时间
+                },
+            ]
+        } <br/>}</p>
+
+<p>四. 查看全部文章页面
+1. 获取某类文章列表
+- method: GET
+- url: index.php?controller=article&amp;action=lists
+- parameters:  key(菜单的key,用于区分那类型的文章), type=all(查看全部文章列表), page(页码,从0开始) limit=10(请求数据数量, 默认是10)
+- retrun: 
+{
+        error: 0,
+        msg: &#39;&#39;
+        data: {
+            key: &#39;&#39;,   //文章类型
+            banner: &#39;&#39;,    //横幅图片
+            articles: [
+                {
+                    article<em>id: &#39;&#39;, //文章ID
+                    type: &#39;article&#39;,  //类型, &#39;article&#39;文章信息
+                    title: &#39;&#39;,  //文章标题
+                    picture: &#39;&#39;, // 文章图片
+                    link: &#39;&#39;, // 外链, 这里不需要
+                    post</em>date: &#39;&#39;, // 文章发布时间
+                },
+                {
+                    article<em>id: &#39;&#39;, //文章ID
+                    type: &#39;link&#39;,  //类型, &#39;link&#39;跳转链接
+                    title: &#39;&#39;,  //文章标题
+                    picture: &#39;&#39;, // 文章图片
+                    link: &#39;&#39;, // 外链, 这里需要
+                    post</em>date: &#39;&#39;, // 文章发布时间
+                },
+                {
+                    article<em>id: &#39;&#39;, //文章ID
+                    type: &#39;goodsInfo&#39;,  //类型, &#39;goodsInfo&#39;商品信息
+                    name: &#39;&#39;,   // 商品名称 
+                    price: 0.00,  // 商品价格
+                    title: &#39;&#39;,  //文章标题
+                    picture: &#39;&#39;, // 文章图片
+                    link: &#39;&#39;, //商品跳转链接
+                    post</em>date: &#39;&#39;, // 文章发布时间
+                },
+            ]
+        } <br/>}</p>
+
+<p>五. 文章详情
+1. 获取文章下详情
+- method: GET
+- url: index.php?controller=article&amp;action=view
+- parameters: article<em>id (文章id)
+- retrun: 
+{
+        error: 0,
+        msg: &#39;&#39;
+        data: {
+                    article</em>id: &#39;&#39;, // 文章ID
+                    title: &#39;&#39;,  // 文章标题
+                    content: &#39;&#39;, // 文章正文
+                    post<em>date: &#39;&#39;, // 文章发布时间
+                    tags:  [
+                        {
+                           id: &#39;&#39;,
+                           name: &#39;&#39;,
+                        }
+                    ]
+                    tag</em>ids: ‘1,2,3,4,5’
+             } 
+}  </p>
+
+<p>2.获取推荐文章信息
+- method: GET
+- url: index.php?controller=article&amp;action=listsByTags
+- parameters: tags<a href="tagId, "></a>, limit=3(请求数据数量)
+- retrun: 
+{
+        error: 0,
+        msg: &#39;&#39;
+        data: {
+            articles: [
+                    {
+                    article<em>id: &#39;&#39;, //文章ID
+                    type: &#39;article&#39;,  //类型, &#39;article&#39;文章信息
+                    title: &#39;&#39;,  //文章标题
+                    picture: &#39;&#39;, // 文章图片
+                    link: &#39;&#39;, // 外链, 这里不需要
+                    post</em>date: &#39;&#39;, // 文章发布时间
+                },
+                {
+                    article<em>id: &#39;&#39;, //文章ID
+                    type: &#39;link&#39;,  //类型, &#39;link&#39;跳转链接
+                    title: &#39;&#39;,  //文章标题
+                    picture: &#39;&#39;, // 文章图片
+                    link: &#39;&#39;, // 外链, 这里需要
+                    post</em>date: &#39;&#39;, // 文章发布时间
+                },
+                {
+                    article<em>id: &#39;&#39;, //文章ID
+                    type: &#39;goodsInfo&#39;,  //类型, &#39;goodsInfo&#39;商品信息
+                    name: &#39;&#39;,   // 商品名称 
+                    price: 0.00,  // 商品价格
+                    title: &#39;&#39;,  //文章标题
+                    picture: &#39;&#39;, // 文章图片
+                    link: &#39;&#39;, //商品跳转链接
+                    post</em>date: &#39;&#39;, // 文章发布时间
+                },
+                ]
+            } 
+}</p>
+
+<p>六. 战神成绩
+1. 获取战神成绩
+- method: GET
+- url: index.php?controller=employee&amp;action=myScores
+- parameters: partner<em>id, employee</em>sn
+- retrun: 
+{
+        error: 0,
+        msg: &#39;&#39;,
+        data: {
+            partner<em>id: 12345, // 战队id
+            employee</em>sn: 012, // 战神编号
+            new<em>stores</em>num: 0, // 拓展店数
+            heat: 0, //热度
+            proportion: 0, //占比
+            beat<em>num: 0, //击败全国战神数
+            one</em>heat: {
+                rank: 0, // 热度对内排名
+                number: 0, // 热度数量
+                ratio: 50.55, // 热度百分比
+            },   // 1热度情况
+            two<em>heat: {
+                rank: 0, // 热度对内排名
+                number: 0, // 热度数量
+                : 50.55, // 热度百分比
+            },   // 2热度情况
+            three</em>heat: {
+                rank: 0, // 热度对内排名
+                number: 0, // 热度数量
+                ratio: 50.55, // 热度百分比
+            },   // 3热度情况
+}  </p>
+
+<p>七. 战神的商家
+1. 获取需要帮助的商家
+- method: GET
+- url: index.php?controller=employee&amp;action=myStores
+- parameters: partner<em>id, employee</em>sn, type=last, limit=10(请求数据数量, 默认是10)
+- retrun: 
+{
+        error: 0,
+        msg: &#39;&#39;,
+        data: {
+            stores:[
+                {
+                    store<em>name: &#39;&#39;, // 店铺名称
+                    proportion: &#39;&#39;,  // 环比
+                    up</em>or_down: &#39;&#39;,  // 升或降, up为升 down为降
+                }
+            ] 
+}</p>
+
+<p>2.获取已经帮助的商家
+- method: GET
+- url: index.php?controller=employee&amp;action=myStores
+- parameters: partner<em>id, employee</em>sn, type=top, limit=10(请求数据数量, 默认是10)
+- retrun: 
+{
+        error: 0,
+        msg: &#39;&#39;,
+        data: {
+            stores:[
+                {
+                    store<em>name: &#39;&#39;,  // 店铺名称
+                    proportion: &#39;&#39;,  // 环比
+                    up</em>or_down: &#39;&#39;,  // 升或降, up为升 down为降
+                }
+            ] 
+}  </p>
