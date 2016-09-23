@@ -31,7 +31,7 @@
 - method: GET
 - url: index.php?controller=article&action=listsByTags
 - parameters: 
-    - tags[] (tagId, ) or  tag_ids: ‘1,2,3,4,5’
+    - tags[] (tagId) or  tag_ids: ‘1,2,3,4,5’
     - limit=3(请求数据数量)
 - retrun: 
         {
