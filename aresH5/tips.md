@@ -36,7 +36,9 @@
 
 * method: GET
 * url: index.php?controller=article&action=lists
-* parameters: key\(菜单的key,用于区分获取文章类型\), type=recommended\(首页推送列表\)
+* parameters: 
+    - key\(菜单的key,用于区分获取文章类型\), 
+    - type=recommended\(首页推送列表\)
 * retrun: 
   ```
     {
