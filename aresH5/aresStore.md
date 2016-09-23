@@ -17,8 +17,8 @@
             data: {
                 stores:[
                     {
-                        
-                        store_name: '', // 店铺名称
+                        store_id: '',    // 店铺ID
+                        store_name: '',  // 店铺名称
                         proportion: '',  // 环比
                         up_or_down: '',  // 升或降, up为升 down为降
                     }
