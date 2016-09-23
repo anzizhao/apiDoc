@@ -28,7 +28,7 @@
 
 
 <h4 id='getPush'>2. 获取推荐文章信息</h4>
-- method: GET
+- method: GET123123
 - url: index.php?controller=article&action=listsByTags
 - parameters: 
     - tags[] (tagId) or  tag_ids: ‘1,2,3,4,5’,
