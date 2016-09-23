@@ -16,7 +16,7 @@
             msg: ''
             data: {
                 key: '',   //文章类型
-                banner: '',    //横幅图片
+                banner: '',   //横幅图片
                 articles: [
                     {
                         article_id: '', //文章ID
