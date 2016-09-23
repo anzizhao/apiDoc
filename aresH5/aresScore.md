@@ -16,7 +16,7 @@
                 employee_sn: 012, // 战神编号
                 new_stores_num: 0, // 拓展店数
                 heat: 0, //热度
-                beat_ratio: 0, //击败全国战神比例数
+                beat_ratio: 50.55, //击败全国战神比例数
                 one_heat: {
                     rank: 0, // 热度对内排名
                     number: 0, // 热度数量
