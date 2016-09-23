@@ -6,7 +6,7 @@
 - url: index.php?controller=employee&action=card
 - parameters: 
     - partner_id, 
-    - employee_sn
+    - employee_sn,
 - retrun: 
         {
              error: 0,
