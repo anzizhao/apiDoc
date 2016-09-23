@@ -7,7 +7,7 @@
 - method: GET
 - url: index.php?controller=article&action=view
 - parameters: 
-    - article_id (文章id)
+    - article_id(文章id)
 - retrun: 
         {
             error: 0,
