@@ -19,7 +19,7 @@
                             {    
                                 "type":"click",  // type 为click, 前端做的一些操作
                                 "name":"公司动态",
-                                "key": "companyState",
+                                "cate_id": "1",
                             },
                             {
                                 "type":"view",    //type为view, 直接点击url跳转

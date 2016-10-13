@@ -6,7 +6,7 @@
 - method: GET
 - url: index.php?controller=article&action=lists
 - parameters:  
-    - key(菜单的key,用于区分那类型的文章), 
+    - cate_id(菜单的cate_id,用于区分那类型的文章), 
     - type=all(查看全部文章列表), 
     - page(页码,从0开始),
     - limit=10(请求数据数量, 默认是10)
