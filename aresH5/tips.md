@@ -37,7 +37,7 @@
 * method: GET
 * url: index.php?controller=article&action=lists
 * parameters: 
-    - cate_id(菜单的cate_id,用于区分获取文章类型), 
+    - cate_id(菜单的cate_id,用于区分获取文章类型,首页推荐文章时为0，点击按钮时正整数), 
     - type=recommended(首页推送列表)
 * retrun: 
   ```
