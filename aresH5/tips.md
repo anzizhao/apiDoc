@@ -6,7 +6,10 @@
 
 * method: GET
 * url: index.php?controller=article&action=menus
-* parameters: 
+* parameters:
+ - partner_id (战队ID),
+ - employee_sn (战神编号),
+
 * retrun: 
   ```
     {
