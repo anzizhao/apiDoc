@@ -5,8 +5,8 @@
 - method: GET
 - url: index.php?controller=employee&action=card
 - parameters: 
-    - partner_id, 
-    - employee_sn,
+ - partner_id (战队ID),
+ - employee_sn (战神编号),
 - retrun: 
 
         {
